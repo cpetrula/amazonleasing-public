@@ -1,141 +1,133 @@
 <template>
   	<div id="home">
-		<div class="uk-container">
-	  	<div uk-grid uk-height-match>
-			<div class="uk-width-3-4">
-				<div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slideshow="autoplay:true;animation: push;min-height: 300; max-height: 400">
 
-					<ul class="uk-slideshow-items">
-						<li>
-							<img src="/images/slide-classic-cars.jpg" alt="" uk-cover>
-							<div class="uk-position-center uk-position-small uk-text-center uk-light">
-								<h2 class="uk-margin-remove">Center</h2>
-								<p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							</div>
-						</li>
-						<li>
-							<img src="/images/1972-ford-bronco.jpeg" alt="" uk-cover>
-							<div class="uk-position-bottom uk-position-medium uk-text-center uk-light">
-								<h3 class="uk-margin-remove">Bottom</h3>
-								<p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							</div>
-						</li>
-						<li>
-							<img src="/images/020410432034.jpg" alt="" uk-cover>
-							<div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center">
-								<h3 class="uk-margin-remove">Overlay Bottom</h3>
-								<p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							</div>
-						</li>
-					</ul>
-
-					<div class="uk-light">
-						<a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-						<a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
-					</div>
-
+		<div class="container" >
+	  		<div class="row mt-4 bg-light shadow mr-0 ml-0">
+				<div class="col-md-8 pl-0">
+					<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+					  <ol class="carousel-indicators">
+						<li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+						<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+					  </ol>
+					  <div class="carousel-inner" role="listbox" style="max-height:300px !important;">
+						<div class="carousel-item active">
+						  <img src="/images/020410432034.jpg" class="img-fluid d-block w-100" alt="...">
+						  <div class="carousel-caption d-none d-md-block">
+							<h5>First slide label</h5>
+							<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+						  </div>
+						</div>
+						<div class="carousel-item">
+						  <img src="/images/slide-classic-cars.jpg" class="img-fluid d-block w-100" alt="...">
+						  <div class="carousel-caption d-none d-md-block">
+							<h5>Second slide label</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						  </div>
+						</div>
+						<div class="carousel-item">
+						  <img src="/images/1972-ford-bronco.jpeg" class="img-fluid d-block w-100" alt="...">
+						  <div class="carousel-caption d-none d-md-block">
+							<h5>Third slide label</h5>
+							<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+						  </div>
+						</div>
+					  </div>
+					  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					  </a>
+					  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					  </a>
 				</div>
+			</div>		
+			<div class="col-md-4 p-4">
+				<form>
+					<h3>
+						<span class="text-danger">Find</span> Your New Car
+	</h3>
+					<label>Make</label>
+					<select class="form-control">
+						<option></option>				
+					</select>
+					<label>Model</label>
+					<select class="form-control">
+						<option></option>				
+					</select>
+					<button id="search-btn" class="float-right btn btn-outline-danger mt-10">Search</button>
+				</form>
 			</div>
-			<div class="uk-section uk-section-muted uk-width-1-4">Search Form</div>
 		</div>
+			
 	</div>
-
+	
   
 	  
 	  <!-- Featured Vechiles //-->
-	  <div class="uk-container ">
+	<div class="container mt-5 mb-5">
 		  
-	  <h3 class="uk-heading uk-text-large"><span class="uk-text-danger">Featured</span> Vehicles</h3>
-	<hr/>
-		  
-		  
-	  <div uk-slider>
-
-    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
-
-        <ul class="uk-slider-items uk-child-width-1-4@s uk-grid" uk-height-match=".uk-card">
-            <li>
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="https://amazonleasing.com/admin/autos/07/070812052024.jpg" alt="">
-                    </div>
-                    <div>
-                        <div class="">2005 Ferrari Vintage Superamerica</div>
-                        <div>$2,999 +tax</div>
-						<div class="detail-btn-container"><button class="uk-button uk-button-danger uk-button-small">Details</button></div>
-                    </div>
-					
-						
-					
-                </div>
-            </li>
-            <li>
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="" alt="">
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Headline</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="" alt="">
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Headline</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="" alt="">
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Headline</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
-                        <img src="" alt="">
-                    </div>
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Headline</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    </div>
-                </div>
-            </li>
-        </ul>
-
-        <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-        <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
-
-    </div>
-
-    <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-
-</div>
+	  	<h3><span class="text-danger">Featured</span> Vehicles</h3>
+		<hr/>
+		  	<div class="row">
+			  	<div class="col">
+				  	<div class="card mb-3 h-100">
+					  <img src="https://amazonleasing.com/admin/autos/01/tn_011008541951.JPG" class="card-img-top" alt="...">
+					  <div class="card-body">
+						<h5 class="card-title">2020 Lamborghini Urus SUV</h5>
+						<p class="card-text">$2,594.51 per month</p>
+					  </div>
+						<div class="card-footer"><button class="btn btn-danger">View Details</button></div>
+					</div>
+				</div>
+							  	<div class="col">
+				  	<div class="card mb-3">
+					  <img src="https://amazonleasing.com/admin/autos/01/tn_011008541951.JPG" class="card-img-top" alt="...">
+					  <div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						<p class="card-text"><button class="btn btn-danger">View Details</button></p>
+					  </div>
+					</div>
+				</div>
+							  	<div class="col">
+				  	<div class="card mb-3">
+					  <img src="https://amazonleasing.com/admin/autos/01/tn_011008541951.JPG" class="card-img-top" alt="...">
+					  <div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						<p class="card-text"><button class="btn btn-danger">View Details</button></p>
+					  </div>
+					</div>
+				</div>
+							  	<div class="col">
+				  	<div class="card mb-3">
+					  <img src="https://amazonleasing.com/admin/autos/01/tn_011008541951.JPG" class="card-img-top" alt="...">
+					  <div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						<p class="card-text"><button class="btn btn-danger">View Details</button></p>
+					  </div>
+					</div>
+				</div>
+			</div>
 	</div>
+		
+</div>
 
-
-	  
-  </div>
 </template>
 <style>
-	.uk-navbar {
-		margin-bottom:0px !important;
-	}
+
 	.detail-btn-container {
 		position:absolute;
 		bottom:10px;
 		left:10px;
 	}
+	#search-btn {
+		position:absolute;
+		bottom:20px;
+		right:25px;
+	}
+	
 </style>
